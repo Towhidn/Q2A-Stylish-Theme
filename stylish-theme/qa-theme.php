@@ -172,7 +172,7 @@ class qa_html_theme extends qa_html_theme_base{
 		$this->q_item_title($q_item);
 		$this->q_item_content($q_item);
 		
-		$this->post_avatar_meta($q_item, 'qa-q-item');
+		qa_html_theme_base::post_avatar_meta($q_item, 'qa-q-item');
 		$this->post_tags($q_item, 'qa-q-item');
 		$this->q_item_buttons($q_item);
 			
