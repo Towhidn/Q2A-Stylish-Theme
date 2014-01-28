@@ -4,7 +4,11 @@ $theme_url = qa_opt('site_url') . 'qa-theme/' . qa_get_site_theme() . '/';
 qa_register_layer('/qa-admin-options.php', 'Theme Options', $theme_dir , $theme_url );
 
 class qa_html_theme extends qa_html_theme_base{
-
+	function head_metas()
+	{
+		qa_html_theme_base::head_metas();
+		$this->output('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">');
+	}
 	function head_css()
 	{
 		if (qa_opt('qat_compression')==2) //Gzip
